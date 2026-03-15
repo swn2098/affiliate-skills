@@ -5,12 +5,12 @@
 | Skill | Stage | Description |
 |-------|-------|-------------|
 | `affiliate-program-search` | S1: Research | Research and score programs from list.affitor.com |
+| `viral-post-writer` | S2: Content | Write viral social media posts for affiliate products |
 
 ## In Progress
 
 | Skill | Stage | Target | Owner |
 |-------|-------|--------|-------|
-| `viral-post-writer` | S2: Content | Phase 2a | Affitor team |
 | API search filters | Infrastructure | Phase 2b | Affitor team |
 
 ## Planned (Affitor team)

@@ -46,6 +46,60 @@
           "pass_criteria": "Output defaults to beginner-friendly criteria (AI/SaaS, recurring, easy to demo). Recommends products with free tiers and low payout thresholds. Includes clear next steps."
         }
       ]
+    },
+    "viral-post-writer": {
+      "tests": [
+        {
+          "id": "s2-001",
+          "name": "LinkedIn post for a specific product",
+          "input_prompt": "Write a LinkedIn post promoting HeyGen",
+          "expected_patterns": [
+            "HeyGen",
+            "Post Content",
+            "Link placement",
+            "#ad",
+            "Engagement Tips"
+          ],
+          "pass_criteria": "Output contains a ready-to-copy LinkedIn post with a clear hook in the first line, no external link in the post body (link in comments), FTC disclosure, and posting tips. Must NOT start with 'I'm excited to share'."
+        },
+        {
+          "id": "s2-002",
+          "name": "X thread for SEO tool",
+          "input_prompt": "Create an X thread about Semrush for SEO marketers",
+          "expected_patterns": [
+            "Semrush",
+            "Tweet 1",
+            "Thread",
+            "#ad",
+            "SEO"
+          ],
+          "pass_criteria": "Output contains a multi-tweet thread (5+ tweets), numbered or clearly separated. First tweet has a compelling hook. Last tweet contains CTA, link, and #ad disclosure. Content is specific to SEO use cases."
+        },
+        {
+          "id": "s2-003",
+          "name": "Reddit post with personal experience",
+          "input_prompt": "I've been using Notion for 2 years, help me write a Reddit post",
+          "expected_patterns": [
+            "Notion",
+            "pros",
+            "cons",
+            "disclosure",
+            "affiliate"
+          ],
+          "pass_criteria": "Output includes both pros and cons (Reddit requires honesty). Uses the user's personal experience. Includes 'Full disclosure: affiliate link' at the bottom. Suggests relevant subreddits. Does NOT read like an ad."
+        },
+        {
+          "id": "s2-004",
+          "name": "All platforms for a single product",
+          "input_prompt": "Promote GetResponse on all platforms",
+          "expected_patterns": [
+            "GetResponse",
+            "LinkedIn",
+            "Reddit"
+          ],
+          "pass_criteria": "Output contains at least 3 separate posts for different platforms (LinkedIn, X, Reddit). Each post is formatted differently and tailored to the platform. Each has appropriate FTC disclosure for that platform."
+        }
+      ]
     }
   }
 }

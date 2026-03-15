@@ -29,7 +29,7 @@ S5: Distribution  bio-link-deployer           Your own link-in-bio page, zero de
 | Skill | Stage | Status | Description |
 |-------|-------|--------|-------------|
 | [affiliate-program-search](skills/affiliate-program-search/) | S1: Research | Shipped | Research and score affiliate programs from list.affitor.com |
-| [viral-post-writer](skills/viral-post-writer/) | S2: Content | Planned | Write viral posts for LinkedIn, X, Reddit, Facebook |
+| [viral-post-writer](skills/viral-post-writer/) | S2: Content | Shipped | Write viral posts for LinkedIn, X, Reddit, Facebook |
 | [affiliate-blog-builder](skills/affiliate-blog-builder/) | S3: Blog | Planned | SEO-optimized affiliate blog posts |
 | [landing-page-creator](skills/landing-page-creator/) | S4: Landing | Planned | High-converting landing pages in HTML/CSS |
 | [bio-link-deployer](skills/bio-link-deployer/) | S5: Distribution | Planned | Linktree alternative you own |
