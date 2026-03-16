@@ -17,6 +17,9 @@ const STAGES = {
   blog: { label: 'Blog & SEO', description: 'Long-form SEO-optimized articles', order: 3 },
   landing: { label: 'Landing Pages', description: 'High-converting affiliate pages', order: 4 },
   distribution: { label: 'Distribution & Deployment', description: 'Link hubs, bio pages, deployment', order: 5 },
+  analytics: { label: 'Analytics & Optimization', description: 'Track, measure, and optimize affiliate performance', order: 6 },
+  automation: { label: 'Automation & Scale', description: 'Automate workflows and scale what\'s working', order: 7 },
+  meta: { label: 'Meta', description: 'Cross-cutting skills for discovery, planning, compliance, and self-improvement', order: 8 },
 };
 
 function parseFrontmatter(content) {

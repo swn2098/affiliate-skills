@@ -1,86 +1,222 @@
-# Affiliate Skills by Affitor
+# affiliate-skills
 
-> AI-powered skills that take you from zero to first commission.
+**Turn Claude Code into your affiliate marketing team.**
 
-Open-source [Claude Skills](https://docs.anthropic.com/en/docs/claude-code/skills) for affiliate marketers. Each skill covers one stage of the affiliate funnel. Use them standalone or chain them together.
+32 AI-powered [Claude Skills](https://docs.anthropic.com/en/docs/claude-code/skills) that take you from zero to first commission. Research programs, write content, build pages, deploy, track, optimize, scale — all as slash commands.
 
-## The Affiliate Funnel
+### Without affiliate-skills
 
-```
-S1: Research      affiliate-program-search    Find and evaluate the best programs to promote
-       |
-       v
-S2: Content       viral-post-writer           Write posts that drive clicks on any platform
-       |
-    +--+--+
-    |     |
-    v     v
-S3: Blog          affiliate-blog-builder      SEO-optimized review and comparison articles
-    |
-    v
-S4: Landing       landing-page-creator        High-converting pages, pure HTML/CSS
-    |
-    v
-S5: Distribution  bio-link-deployer           Your own link-in-bio page, zero dependencies
-```
+- You Google "best affiliate programs" and get SEO spam written to rank, not to help
+- You write a blog review and guess if the CTA, headline, or disclosure is any good
+- You have no idea which content actually drives clicks — you just hope
+- You spend 4 hours on a landing page that converts at 0.2%
+- You pick programs by vibes instead of data
 
-## Skills
+### With affiliate-skills
 
-| Skill | Stage | Status | Description |
-|-------|-------|--------|-------------|
-| [affiliate-program-search](skills/research/affiliate-program-search/) | S1: Research | Shipped | Research and score affiliate programs from list.affitor.com |
-| [viral-post-writer](skills/content/viral-post-writer/) | S2: Content | Shipped | Write viral posts for LinkedIn, X, Reddit, Facebook |
-| [affiliate-blog-builder](skills/blog/affiliate-blog-builder/) | S3: Blog | Shipped | SEO-optimized affiliate blog posts |
-| [landing-page-creator](skills/landing/landing-page-creator/) | S4: Landing | Shipped | High-converting landing pages in HTML/CSS |
-| [bio-link-deployer](skills/distribution/bio-link-deployer/) | S5: Distribution | Shipped | Linktree alternative you own |
+| Skill | Mode | What it does |
+|-------|------|--------------|
+| `/affiliate-check` | Data analyst | Live program data from list.affitor.com — commissions, cookies, comparisons. |
+| `/research` | Scout | Score and rank programs. Find the best one for your niche. |
+| `/funnel-planner` | Strategist | Week-by-week roadmap from zero to revenue. Chain skills automatically. |
+| Content, Blog, Landing, Distribution | Creator | 20 skills that write posts, articles, pages, and deploy them. |
+| Analytics, Automation | Optimizer | Track conversions, A/B test, repurpose content, scale what works. |
+| Compliance, Self-improver | Safety net | FTC audit before you publish. Retrospective after you launch. |
 
-## Repo Structure
+## Demo: zero to first commission
 
 ```
-skills/
-├── research/                          S1: Find & evaluate programs
-│   └── affiliate-program-search/
-├── content/                           S2: Create social content
-│   └── viral-post-writer/
-├── blog/                              S3: Long-form SEO content
-│   └── affiliate-blog-builder/
-├── landing/                           S4: High-converting pages
-│   └── landing-page-creator/
-└── distribution/                      S5: Link hubs & deployment
-    └── bio-link-deployer/
+You:   I want to promote AI video tools. What's the best program?
+
+       affiliate-check search "AI video"
+
+Claude: [queries list.affitor.com in real-time]
+
+         Name                      Commission           Cookie     Stars
+         ─────────────────────────────────────────────────────────────────
+         HeyGen                    30% recurring        60 days    ★ 127
+         Synthesia                 25% one-time         30 days    ★ 84
+         D-ID                      20% recurring        45 days    ★ 52
+
+       HeyGen is the clear winner: highest commission, recurring, longest
+       cookie. Let me research it in depth.
+
+You:   Write a blog review of HeyGen for content creators.
+
+Claude: [runs affiliate-blog-builder skill]
+        [2,000-word SEO review with pros/cons, comparison table,
+         FTC disclosure, and affiliate CTA]
+
+You:   Create a landing page for this.
+
+Claude: [runs landing-page-creator skill]
+        [single-file HTML/CSS page, AIDA framework, mobile-responsive,
+         "Powered by Affitor" footer, ready to deploy]
+
+You:   Plan my full funnel — I have 5 hours/week and I blog.
+
+Claude: [runs funnel-planner skill]
+
+        Week 1: Research (affiliate-program-search) → select 2-3 programs
+        Week 2: Content (viral-post-writer) → 5 LinkedIn + Twitter posts
+        Week 3: Blog (affiliate-blog-builder) → 1 review article
+        Week 4: Deploy (bio-link-deployer) → bio link page live
+        Week 5: Analytics (seo-audit) → fix SEO issues
+        Week 6: Optimize (ab-test-generator) → test headlines
+
+        Success metric: first affiliate click by week 3, first commission
+        by week 6.
 ```
+
+## Who this is for
+
+You want to do affiliate marketing with AI — not by hand. You want data-driven program selection, not guesswork. You want content that converts, not content that exists.
+
+This is not a prompt pack for beginners. It is an operating system for affiliates who ship.
+
+## Install
+
+**Requirements:** [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Git](https://git-scm.com/), [Bun](https://bun.sh/) v1.0+ (for `affiliate-check` binary).
+
+### Step 1: Install on your machine
+
+Open Claude Code and paste this:
+
+> Install affiliate-skills: run `git clone https://github.com/Affitor/affiliate-skills.git ~/.claude/skills/affiliate-skills && cd ~/.claude/skills/affiliate-skills && ./setup` then add an "affiliate-skills" section to CLAUDE.md that says to use `/affiliate-check` for all affiliate program lookups, and lists the available skills: 32 skills across 8 stages (research, content, blog, landing, distribution, analytics, automation, meta). Set `AFFITOR_API_KEY` env var for unlimited access.
+
+### Step 2: Add to your repo so teammates get it (optional)
+
+> Add affiliate-skills to this project: run `cp -Rf ~/.claude/skills/affiliate-skills .claude/skills/affiliate-skills && rm -rf .claude/skills/affiliate-skills/.git && cd .claude/skills/affiliate-skills && ./setup` then add the affiliate-skills section to this project's CLAUDE.md.
+
+### What gets installed
+
+- Skill files (32 Markdown skills) in `~/.claude/skills/affiliate-skills/skills/`
+- `affiliate-check` binary at `tools/dist/affiliate-check` (~5MB, gitignored)
+- `node_modules/` (gitignored)
+
+Everything lives inside `.claude/`. Nothing touches your PATH or runs in the background until you call it.
+
+---
+
+## The Affiliate Funnel — 8 Stages, 32 Skills
+
+```
+  S1 RESEARCH ──▶ S2 CONTENT ──▶ S3 BLOG ──▶ S4 LANDING
+       │                                         │
+       ▼                                         ▼
+  S6 ANALYTICS ◀──────── S5 DISTRIBUTION ◀──────┘
+       │
+       ▼
+  S7 AUTOMATION ──▶ SCALE
+       │
+  S8 META (plan, comply, improve) ── across all stages
+```
+
+### S1: Research & Discovery
+Find and evaluate the best affiliate programs to promote.
+
+| Skill | Description |
+|-------|-------------|
+| [affiliate-program-search](skills/research/affiliate-program-search/) | Research and score programs from list.affitor.com |
+| [niche-opportunity-finder](skills/research/niche-opportunity-finder/) | Find underserved niches with high potential |
+| [competitor-spy](skills/research/competitor-spy/) | Analyze competitor affiliate strategies |
+| [commission-calculator](skills/research/commission-calculator/) | Calculate and compare commission structures |
+
+### S2: Content Creation
+Write viral social media content that drives clicks.
+
+| Skill | Description |
+|-------|-------------|
+| [viral-post-writer](skills/content/viral-post-writer/) | LinkedIn, X, Reddit, Facebook posts |
+| [twitter-thread-writer](skills/content/twitter-thread-writer/) | Multi-tweet threads with hooks |
+| [reddit-post-writer](skills/content/reddit-post-writer/) | Authentic Reddit posts with disclosure |
+| [tiktok-script-writer](skills/content/tiktok-script-writer/) | Short-form video scripts |
+
+### S3: Blog & SEO
+Long-form SEO-optimized articles that rank and convert.
+
+| Skill | Description |
+|-------|-------------|
+| [affiliate-blog-builder](skills/blog/affiliate-blog-builder/) | Full review and how-to articles |
+| [comparison-post-writer](skills/blog/comparison-post-writer/) | Head-to-head product comparisons |
+| [listicle-generator](skills/blog/listicle-generator/) | "Top N" roundup articles |
+| [how-to-tutorial-writer](skills/blog/how-to-tutorial-writer/) | Tutorial articles with product integration |
+
+### S4: Landing Pages
+High-converting pages in pure HTML/CSS — no framework, no dependencies.
+
+| Skill | Description |
+|-------|-------------|
+| [landing-page-creator](skills/landing/landing-page-creator/) | AIDA-framework landing pages |
+| [product-showcase-page](skills/landing/product-showcase-page/) | Single-product showcase |
+| [squeeze-page-builder](skills/landing/squeeze-page-builder/) | Lead capture pages |
+| [webinar-registration-page](skills/landing/webinar-registration-page/) | Event-based promotion |
+
+### S5: Distribution & Deployment
+Get your content live and distributed.
+
+| Skill | Description |
+|-------|-------------|
+| [bio-link-deployer](skills/distribution/bio-link-deployer/) | Linktree alternative you own |
+| [email-drip-sequence](skills/distribution/email-drip-sequence/) | 5-7 email nurture sequence |
+| [social-media-scheduler](skills/distribution/social-media-scheduler/) | Posting schedule and calendar |
+| [github-pages-deployer](skills/distribution/github-pages-deployer/) | Deploy to GitHub Pages |
+
+### S6: Analytics & Optimization
+Track, measure, and optimize your affiliate performance.
+
+| Skill | Description |
+|-------|-------------|
+| [conversion-tracker](skills/analytics/conversion-tracker/) | UTM links, tracking pixels, attribution |
+| [ab-test-generator](skills/analytics/ab-test-generator/) | A/B test variants for headlines and CTAs |
+| [performance-report](skills/analytics/performance-report/) | Weekly/monthly KPI reports |
+| [seo-audit](skills/analytics/seo-audit/) | 10-dimension SEO scorecard |
+
+### S7: Automation & Scale
+Automate workflows and scale what's working.
+
+| Skill | Description |
+|-------|-------------|
+| [email-automation-builder](skills/automation/email-automation-builder/) | Branching email flows with conditions |
+| [content-repurposer](skills/automation/content-repurposer/) | One piece of content → multiple formats |
+| [multi-program-manager](skills/automation/multi-program-manager/) | Affiliate program portfolio strategy |
+| [paid-ad-copy-writer](skills/automation/paid-ad-copy-writer/) | Ad copy for Facebook, Google, TikTok |
+
+### S8: Meta
+Cross-cutting skills for discovery, planning, compliance, and self-improvement.
+
+| Skill | Description |
+|-------|-------------|
+| [skill-finder](skills/meta/skill-finder/) | Find the right skill for any goal |
+| [funnel-planner](skills/meta/funnel-planner/) | Plan a complete affiliate funnel roadmap |
+| [compliance-checker](skills/meta/compliance-checker/) | FTC compliance and platform rules audit |
+| [self-improver](skills/meta/self-improver/) | Campaign retrospective and improvement plan |
+
+---
 
 Machine-readable index: [`registry.json`](registry.json) · Skill template: [`template/SKILL.md`](template/SKILL.md) · Spec: [`spec/`](spec/)
 
-## Quick Start
+## How it works
 
-**Option 1: Copy the skill file**
+Each skill is a single Markdown file (`SKILL.md`) that tells Claude exactly how to think about a specific affiliate marketing task. Skills define:
 
-1. Open any skill folder (e.g., `skills/research/affiliate-program-search/`)
-2. Copy the contents of `SKILL.md`
-3. Save it as a skill in your Claude project
+- **When to trigger** — natural language patterns that activate the skill
+- **Input/Output schemas** — structured data for agent interop
+- **Workflow** — step-by-step procedure with decision points
+- **Chaining** — how outputs from one skill feed into the next
 
-**Option 2: Install from list.affitor.com**
+Skills pass data through conversation context, not files. Run S1 to find a program, then S2 uses that program's data automatically — no copy-pasting.
 
-```bash
-curl -s https://list.affitor.com/api/v1/skills/affiliate-program-search/raw > SKILL.md
-```
-
-**Option 3: Use directly**
-
-Just ask Claude something like:
-
-- "Find me the best AI video affiliate programs with recurring commission"
-- "Write a LinkedIn post promoting HeyGen"
-- "Create a review blog post comparing AI video tools"
-
-## Entry Points
+## Entry points
 
 You don't have to start from S1. Jump in wherever you are:
 
-- **Beginner:** S1 → S2 → S3 → S4 → S5 (full funnel)
+- **New to affiliate marketing:** S8 `funnel-planner` → it plans everything for you
 - **Have a product already:** S2 (write content) or S3 (write a review)
 - **Have content, need pages:** S4 (landing page) or S5 (bio link)
+- **Want to optimize:** S6 (analytics + SEO audit)
+- **Ready to scale:** S7 (automation + paid ads)
+- **Not sure which skill:** S8 `skill-finder`
 
 ## Contributing
 
