@@ -1,0 +1,12 @@
+{
+  "name": "affiliate-skills",
+  "version": "1.0.0",
+  "description": "AI-powered Claude Code skills for affiliate marketing",
+  "scripts": {
+    "build": "bun build --compile tools/src/cli.ts --outfile tools/dist/affiliate-check",
+    "dev": "bun run tools/src/cli.ts",
+    "test": "bun test tools/test/"
+  },
+  "license": "MIT",
+  "devDependencies": {}
+}

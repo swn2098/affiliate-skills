@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated_at": "2026-03-15T23:51:09.253Z",
+  "generated_at": "2026-03-16T03:47:13.132Z",
   "stages": {
     "research": {
       "label": "Research & Discovery",
@@ -26,6 +26,21 @@
       "label": "Distribution & Deployment",
       "description": "Link hubs, bio pages, deployment",
       "order": 5
+    },
+    "analytics": {
+      "label": "Analytics & Optimization",
+      "description": "Track, measure, and optimize affiliate performance",
+      "order": 6
+    },
+    "automation": {
+      "label": "Automation & Scale",
+      "description": "Automate workflows and scale what's working",
+      "order": 7
+    },
+    "meta": {
+      "label": "Meta",
+      "description": "Cross-cutting skills for discovery, planning, compliance, and self-improvement",
+      "order": 8
     }
   },
   "skills": [
@@ -78,7 +93,7 @@
       "slug": "reddit-post-writer",
       "stage": "content",
       "version": "1.0.0",
-      "description": "> Write Reddit posts and comments that recommend affiliate products without getting flagged as spam. Use this skill when the user wants to promote on Reddit, write a Reddit post for affiliate, create subreddit-native content, draft a Reddit comment recommending a tool, write a \"what tool do you use\" response, or share a product recommendation on Reddit naturally.",
+      "description": "> Write Reddit posts and comments that recommend affiliate products without getting banned or flagged as spam. Subreddit-native content that adds value first. Use this skill when the user asks about Reddit posts for affiliate marketing, writing Reddit comments that mention products, how to promote affiliate links on Reddit, or says \"write a Reddit post for X\", \"how to mention affiliate on Reddit\", \"Reddit comment promoting product\", \"Reddit-friendly affiliate content\", \"post for r/[subreddit] about X\", \"share affiliate link on Reddit without getting banned\", \"genuine Reddit recommendation\", \"organic Reddit affiliate post\", \"Reddit thread idea for product\".",
       "path": "skills/content/reddit-post-writer",
       "agent_compatible": true,
       "tools": [],
@@ -208,7 +223,7 @@
       "slug": "webinar-registration-page",
       "stage": "landing",
       "version": "1.0.0",
-      "description": "> Build a webinar or event registration page as self-contained HTML. Use this skill when the user wants to create a webinar page, build an event registration page, make a workshop signup page, create a live demo registration, build a masterclass landing page, or design a free training signup page with countdown timer.",
+      "description": "> Build a webinar or live event registration page as a self-contained HTML file with countdown timer, speaker bio, agenda, and registration form. Triggers on: \"build a webinar registration page\", \"create a webinar sign-up page\", \"event registration landing page\", \"live training registration page\", \"workshop sign-up page\", \"create a webinar page\", \"build an event page\", \"free webinar landing page\", \"live demo registration page\", \"online event page\", \"create a registration page for my webinar\", \"build a training event page\".",
       "path": "skills/landing/webinar-registration-page",
       "agent_compatible": true,
       "tools": [],
@@ -256,6 +271,138 @@
       "version": "1.0.0",
       "description": "> Create a 30-day social media content calendar for affiliate marketing. Triggers on: \"create a social media calendar\", \"30-day content plan\", \"social media schedule\", \"content calendar for [product]\", \"plan my social posts\", \"social media strategy\", \"schedule my affiliate posts\", \"content plan for LinkedIn\", \"30 days of content\", \"social posting schedule\", \"what should I post this month\", \"write my social content\", \"create posts for LinkedIn X Facebook\", \"affiliate content calendar\", \"social media plan for my affiliate program\".",
       "path": "skills/distribution/social-media-scheduler",
+      "agent_compatible": true,
+      "tools": [],
+      "author": "Affitor"
+    },
+    {
+      "name": "ab-test-generator",
+      "slug": "ab-test-generator",
+      "stage": "analytics",
+      "version": "1.0.0",
+      "description": "> Generate A/B test variants for affiliate content. Triggers on: \"create A/B test\", \"test my headline\", \"optimize my CTA\", \"generate variants\", \"split test ideas\", \"improve click-through rate\", \"test my landing page copy\", \"headline alternatives\", \"CTA variations\", \"which version is better\", \"optimize conversions\", \"test my email subject line\", \"compare approaches\".",
+      "path": "skills/analytics/ab-test-generator",
+      "agent_compatible": true,
+      "tools": [],
+      "author": "Affitor"
+    },
+    {
+      "name": "conversion-tracker",
+      "slug": "conversion-tracker",
+      "stage": "analytics",
+      "version": "1.0.0",
+      "description": "> Set up affiliate conversion tracking with UTM parameters and link tagging. Triggers on: \"set up tracking\", \"create UTM links\", \"track my affiliate links\", \"tracking pixels\", \"click attribution\", \"organize my links\", \"UTM parameters\", \"tag my links\", \"campaign tracking\", \"link tracking setup\", \"prepare for launch\", \"debug attribution\", \"tracking spreadsheet\".",
+      "path": "skills/analytics/conversion-tracker",
+      "agent_compatible": true,
+      "tools": [],
+      "author": "Affitor"
+    },
+    {
+      "name": "performance-report",
+      "slug": "performance-report",
+      "stage": "analytics",
+      "version": "1.0.0",
+      "description": "> Generate affiliate performance reports with KPIs and recommendations. Triggers on: \"show my affiliate report\", \"how are my programs doing\", \"performance review\", \"earnings report\", \"monthly affiliate report\", \"weekly report\", \"analyze my affiliate earnings\", \"which program is best\", \"EPC report\", \"conversion rate analysis\", \"revenue breakdown\", \"campaign performance\".",
+      "path": "skills/analytics/performance-report",
+      "agent_compatible": true,
+      "tools": [],
+      "author": "Affitor"
+    },
+    {
+      "name": "seo-audit",
+      "slug": "seo-audit",
+      "stage": "analytics",
+      "version": "1.0.0",
+      "description": "> Audit affiliate blog posts and landing pages for SEO issues. Triggers on: \"audit my blog post for SEO\", \"check my SEO\", \"SEO review\", \"improve my rankings\", \"SEO checklist\", \"on-page SEO audit\", \"keyword optimization check\", \"why isn't my page ranking\", \"SEO score\", \"content quality audit\", \"check my meta tags\", \"internal linking audit\", \"quick SEO wins\".",
+      "path": "skills/analytics/seo-audit",
+      "agent_compatible": true,
+      "tools": [],
+      "author": "Affitor"
+    },
+    {
+      "name": "content-repurposer",
+      "slug": "content-repurposer",
+      "stage": "automation",
+      "version": "1.0.0",
+      "description": "> Repurpose one piece of affiliate content into multiple formats. Triggers on: \"repurpose my content\", \"turn my blog into tweets\", \"cross-post this\", \"content recycling\", \"convert to newsletter\", \"make a tweet thread from this\", \"adapt for TikTok\", \"omnichannel content\", \"scale my content\", \"turn this into a LinkedIn post\", \"repurpose for email\", \"content multiplication\".",
+      "path": "skills/automation/content-repurposer",
+      "agent_compatible": true,
+      "tools": [],
+      "author": "Affitor"
+    },
+    {
+      "name": "email-automation-builder",
+      "slug": "email-automation-builder",
+      "stage": "automation",
+      "version": "1.0.0",
+      "description": "> Build multi-sequence email automation flows with branching logic. Triggers on: \"build email automation\", \"create email funnel\", \"email automation flow\", \"welcome series with branches\", \"conditional email sequence\", \"set up automation\", \"email workflow builder\", \"segmented email flow\", \"advanced email sequence\", \"nurture funnel\", \"cart abandonment sequence\", \"win-back email flow\".",
+      "path": "skills/automation/email-automation-builder",
+      "agent_compatible": true,
+      "tools": [],
+      "author": "Affitor"
+    },
+    {
+      "name": "multi-program-manager",
+      "slug": "multi-program-manager",
+      "stage": "automation",
+      "version": "1.0.0",
+      "description": "> Manage and compare multiple affiliate programs as a portfolio. Triggers on: \"manage my affiliate programs\", \"compare my programs\", \"portfolio overview\", \"which program should I focus on\", \"diversify my affiliate income\", \"program switching\", \"affiliate portfolio\", \"program comparison\", \"revenue allocation\", \"which programs to drop\", \"add new programs\", \"affiliate program strategy\".",
+      "path": "skills/automation/multi-program-manager",
+      "agent_compatible": true,
+      "tools": [],
+      "author": "Affitor"
+    },
+    {
+      "name": "paid-ad-copy-writer",
+      "slug": "paid-ad-copy-writer",
+      "stage": "automation",
+      "version": "1.0.0",
+      "description": "> Write paid ad copy for affiliate offers across ad platforms. Triggers on: \"write ad copy\", \"Facebook ad for affiliate\", \"Google Ads copy\", \"TikTok ad script\", \"Pinterest ad\", \"paid traffic to affiliate\", \"create ad campaign\", \"ad headlines\", \"ad descriptions\", \"scale with paid ads\", \"run ads for my affiliate link\", \"write Facebook ad\", \"Google Search ad copy\".",
+      "path": "skills/automation/paid-ad-copy-writer",
+      "agent_compatible": true,
+      "tools": [],
+      "author": "Affitor"
+    },
+    {
+      "name": "compliance-checker",
+      "slug": "compliance-checker",
+      "stage": "meta",
+      "version": "1.0.0",
+      "description": "> Check affiliate content for FTC compliance and platform rules. Triggers on: \"check my content for compliance\", \"FTC disclosure check\", \"is this legal\", \"review for compliance\", \"check affiliate disclosure\", \"am I FTC compliant\", \"audit my content\", \"compliance review\", \"legal check\", \"platform rules check\", \"check before publishing\", \"disclosure audit\", \"review my ad copy\".",
+      "path": "skills/meta/compliance-checker",
+      "agent_compatible": true,
+      "tools": [],
+      "author": "Affitor"
+    },
+    {
+      "name": "funnel-planner",
+      "slug": "funnel-planner",
+      "stage": "meta",
+      "version": "1.0.0",
+      "description": "> Plan a complete affiliate funnel from research to revenue. Triggers on: \"plan my affiliate funnel\", \"create a funnel strategy\", \"affiliate business plan\", \"how to start affiliate marketing\", \"full funnel roadmap\", \"plan from scratch\", \"week by week affiliate plan\", \"chain skills together\", \"build my funnel\", \"affiliate marketing roadmap\", \"step by step affiliate plan\", \"onboarding plan\".",
+      "path": "skills/meta/funnel-planner",
+      "agent_compatible": true,
+      "tools": [],
+      "author": "Affitor"
+    },
+    {
+      "name": "self-improver",
+      "slug": "self-improver",
+      "stage": "meta",
+      "version": "1.0.0",
+      "description": "> Review affiliate campaign results and improve strategy. Triggers on: \"review my results\", \"what went wrong\", \"how to improve conversions\", \"analyze my campaign\", \"affiliate retrospective\", \"why am I not converting\", \"improve my strategy\", \"what should I change\", \"campaign review\", \"optimize my approach\", \"learn from my results\", \"post-mortem on my campaign\".",
+      "path": "skills/meta/self-improver",
+      "agent_compatible": true,
+      "tools": [],
+      "author": "Affitor"
+    },
+    {
+      "name": "skill-finder",
+      "slug": "skill-finder",
+      "stage": "meta",
+      "version": "1.0.0",
+      "description": "> Find the right Affitor skill for your goal. Triggers on: \"which skill should I use\", \"find me a skill\", \"what skills are available\", \"help me choose a skill\", \"skill for SEO\", \"skill for email\", \"explore skills\", \"I'm new to Affitor\", \"what can Affitor do\", \"search skills\", \"skill for blog writing\", \"skill for landing pages\", \"skill for analytics\".",
+      "path": "skills/meta/skill-finder",
       "agent_compatible": true,
       "tools": [],
       "author": "Affitor"
