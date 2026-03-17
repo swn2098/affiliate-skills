@@ -7,6 +7,9 @@ description: >
   "write a top tools article", "best [N] alternatives to [product]", "product roundup",
   "write a tools comparison list", "best software for [use case]", "top picks for [category]".
 license: MIT
+version: "1.0.0"
+tags: ["affiliate-marketing", "blogging", "seo", "content-writing", "listicle", "top-lists"]
+compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, OpenClaw, any AI agent"
 metadata:
   author: affitor
   version: "1.0"
@@ -293,3 +296,41 @@ Action: category=SEO tools, primary_product=Semrush, auto-select list_size=8, wr
 
 - `shared/references/ftc-compliance.md` — FTC disclosure text. Read before Step 4.
 - `shared/references/affiliate-glossary.md` — Terminology reference.
+- `shared/references/flywheel-connections.md` — master flywheel connection map
+
+## Flywheel Connections
+
+### Feeds Into
+- `landing-page-creator` (S4) — featured products for landing pages
+- `content-pillar-atomizer` (S2) — listicle as pillar content to atomize
+- `internal-linking-optimizer` (S6) — new listicle needs internal links
+
+### Fed By
+- `affiliate-program-search` (S1) — `recommended_program` as primary product
+- `keyword-cluster-architect` (S3) — commercial intent clusters for listicle topics
+
+### Feedback Loop
+- `seo-audit` (S6) tracks listicle rankings → identify which list formats and sizes rank best
+
+## Quality Gate
+
+Before delivering output, verify:
+
+1. Would I share this on MY personal social?
+2. Contains specific, surprising detail? (not generic)
+3. Respects reader's intelligence?
+4. Remarkable enough to share? (Purple Cow test)
+5. Irresistible offer framing? (if S4 offer skills ran)
+
+Any NO → rewrite before delivering.
+
+```yaml
+chain_metadata:
+  skill_slug: "listicle-generator"
+  stage: "blog"
+  timestamp: string
+  suggested_next:
+    - "landing-page-creator"
+    - "content-pillar-atomizer"
+    - "internal-linking-optimizer"
+```

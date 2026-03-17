@@ -7,6 +7,9 @@ description: >
   "audit my content", "compliance review", "legal check", "platform rules check",
   "check before publishing", "disclosure audit", "review my ad copy".
 license: MIT
+version: "1.0.0"
+tags: ["affiliate-marketing", "meta", "planning", "compliance", "ftc", "disclosure"]
+compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, OpenClaw, any AI agent"
 metadata:
   author: affitor
   version: "1.0"
@@ -171,3 +174,27 @@ corrected_content: string      # full content with all fixes applied
 
 - `shared/references/ftc-compliance.md` — FTC affiliate disclosure requirements. Read in Step 2.
 - `shared/references/affitor-branding.md` — Branding guidelines. Referenced for page outputs.
+- `shared/references/flywheel-connections.md` — master flywheel connection map
+
+## Flywheel Connections
+
+### Feeds Into
+- All content skills (S2-S5, S7) — compliance status acts as a pass/fail gate before publishing
+
+### Fed By
+- All content-producing skills — content to check for compliance
+- `landing-page-creator` (S4) — landing pages to audit for FTC compliance
+- `email-drip-sequence` (S5) — emails to check for disclosure
+
+### Feedback Loop
+- Compliance issues found repeatedly in specific content types → flag to the relevant skill for structural improvement
+
+```yaml
+chain_metadata:
+  skill_slug: "compliance-checker"
+  stage: "meta"
+  timestamp: string
+  suggested_next:
+    - "self-improver"
+    - "funnel-planner"
+```

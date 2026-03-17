@@ -7,6 +7,9 @@ description: >
   "week by week affiliate plan", "chain skills together", "build my funnel",
   "affiliate marketing roadmap", "step by step affiliate plan", "onboarding plan".
 license: MIT
+version: "1.0.0"
+tags: ["affiliate-marketing", "meta", "planning", "compliance", "funnel", "strategy"]
+compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, OpenClaw, any AI agent"
 metadata:
   author: affitor
   version: "1.0"
@@ -175,3 +178,31 @@ milestones:
 
 - `registry.json` — Skill catalog for selecting the right skills. Read in Step 2.
 - `docs/affiliate-funnel-overview.md` — Funnel stage descriptions. Read in Step 2.
+- `shared/references/flywheel-connections.md` — master flywheel connection map
+
+## Flywheel Connections
+
+### Feeds Into
+- All skills (S1-S7) — `roadmap` provides week-by-week execution plan chaining specific skills
+
+### Fed By
+- `commission-calculator` (S1) — commission projections inform funnel ROI estimates
+- `value-ladder-architect` (S4) — value ladder informs the funnel structure
+- `multi-program-manager` (S7) — portfolio data for planning
+- `performance-report` (S6) — performance baselines for goal-setting
+- `category-designer` (S8) — category framing shapes the funnel narrative
+
+### Feedback Loop
+- `performance-report` (S6) tracks funnel progress vs plan → adjust skill sequence and timeline based on actual results
+
+```yaml
+chain_metadata:
+  skill_slug: "funnel-planner"
+  stage: "meta"
+  timestamp: string
+  suggested_next:
+    - "affiliate-program-search"
+    - "viral-post-writer"
+    - "affiliate-blog-builder"
+    - "landing-page-creator"
+```

@@ -10,6 +10,9 @@ description: >
   affiliate programs", "is X affiliate program worth it", "find me something to promote",
   "what pays the most", "affiliate programs with long cookie duration".
 license: MIT
+version: "1.0.0"
+tags: ["affiliate-marketing", "research", "niche-analysis", "program-discovery", "saas", "commission"]
+compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, OpenClaw, any AI agent"
 metadata:
   author: affitor
   version: "1.0"
@@ -193,3 +196,35 @@ User: "I'm a beginner, what should I promote first?"
 - `references/scoring-criteria.md` — the 5-dimension scoring framework with rubrics
 - `references/list-affitor-api.md` — how to fetch data from list.affitor.com (API + fallback)
 - `references/platform-rules.md` — platform-specific considerations when recommending programs
+- `shared/references/flywheel-connections.md` — master flywheel connection map
+
+## Flywheel Connections
+
+### Feeds Into
+- `viral-post-writer` (S2) — `recommended_program` product data for social content
+- `twitter-thread-writer` (S2) — `recommended_program` for Twitter threads
+- `reddit-post-writer` (S2) — `recommended_program` for Reddit posts
+- `content-pillar-atomizer` (S2) — `recommended_program` for content creation
+- `affiliate-blog-builder` (S3) — `recommended_program` for blog articles
+- `landing-page-creator` (S4) — `recommended_program` for landing pages
+- `grand-slam-offer` (S4) — `recommended_program` for offer design
+- `bonus-stack-builder` (S4) — product data for bonus design
+
+### Fed By
+- `conversion-tracker` (S6) — top converting niches → search for more programs in winning niches
+- `performance-report` (S6) — performance data showing which program types convert best
+
+### Feedback Loop
+- Conversion data from S6 reveals which program characteristics (commission type, cookie length, niche) correlate with highest earnings → refine search criteria on next run
+
+```yaml
+chain_metadata:
+  skill_slug: "affiliate-program-search"
+  stage: "research"
+  timestamp: string
+  suggested_next:
+    - "purple-cow-audit"
+    - "viral-post-writer"
+    - "landing-page-creator"
+    - "grand-slam-offer"
+```

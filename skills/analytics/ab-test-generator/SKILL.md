@@ -7,6 +7,9 @@ description: >
   "headline alternatives", "CTA variations", "which version is better",
   "optimize conversions", "test my email subject line", "compare approaches".
 license: MIT
+version: "1.0.0"
+tags: ["affiliate-marketing", "analytics", "optimization", "tracking", "ab-testing", "experiments"]
+compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, OpenClaw, any AI agent"
 metadata:
   author: affitor
   version: "1.0"
@@ -169,3 +172,30 @@ test_plan:
 ## References
 
 - `shared/references/ftc-compliance.md` — Ensure variants preserve FTC disclosure from original. Referenced in Step 3.
+- `shared/references/flywheel-connections.md` — master flywheel connection map
+
+## Flywheel Connections
+
+### Feeds Into
+- `purple-cow-audit` (S1) — winning variants reveal what resonates = what's remarkable
+- `performance-report` (S6) — test results for reporting
+
+### Fed By
+- `viral-post-writer` (S2) — posts to test variations of
+- `twitter-thread-writer` (S2) — thread hooks to test
+- `landing-page-creator` (S4) — landing page elements to test
+- `content-pillar-atomizer` (S2) — volume mode variants for testing
+
+### Feedback Loop
+- Test results directly improve all content-producing skills → winning headlines, CTAs, and angles feed into next content creation cycle
+
+```yaml
+chain_metadata:
+  skill_slug: "ab-test-generator"
+  stage: "analytics"
+  timestamp: string
+  suggested_next:
+    - "performance-report"
+    - "viral-post-writer"
+    - "landing-page-creator"
+```

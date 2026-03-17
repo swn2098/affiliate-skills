@@ -7,6 +7,9 @@ description: >
   "I'm new to Affitor", "what can Affitor do", "search skills",
   "skill for blog writing", "skill for landing pages", "skill for analytics".
 license: MIT
+version: "1.0.0"
+tags: ["affiliate-marketing", "meta", "planning", "compliance", "discovery", "skill-search"]
+compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, OpenClaw, any AI agent"
 metadata:
   author: affitor
   version: "1.0"
@@ -142,3 +145,23 @@ recommended_path:
 ## References
 
 - `registry.json` — Machine-readable skill catalog. Read in Step 1.
+- `shared/references/flywheel-connections.md` — master flywheel connection map
+
+## Flywheel Connections
+
+### Feeds Into
+- Any skill — `matched_skill` routes the user to the right skill
+
+### Fed By
+- `registry.json` — skill catalog with all 44 skills across 8 stages
+
+### Feedback Loop
+- Track which skills are most frequently requested → surface popular skills higher in recommendations
+
+```yaml
+chain_metadata:
+  skill_slug: "skill-finder"
+  stage: "meta"
+  timestamp: string
+  suggested_next: []  # Dynamic — depends on matched skill
+```

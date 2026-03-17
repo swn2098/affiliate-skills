@@ -8,6 +8,9 @@ description: >
   "create a long-form product page", "build a sales page for [product]",
   "product deep dive page", "make a feature breakdown page for [product]".
 license: MIT
+version: "1.0.0"
+tags: ["affiliate-marketing", "landing-pages", "conversion", "offers", "showcase", "product-page"]
+compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, OpenClaw, any AI agent"
 metadata:
   author: affitor
   version: "1.0"
@@ -297,3 +300,42 @@ Action: Auto-pick up Klaviyo from S1 output, research features, build full showc
 - `shared/references/ftc-compliance.md` — Disclosure text for hero and footer. Read in Step 3.
 - `shared/references/affitor-branding.md` — Footer attribution HTML. Read in Step 3.
 - `shared/references/affiliate-glossary.md` — Terminology reference.
+- `shared/references/flywheel-connections.md` — master flywheel connection map
+
+## Flywheel Connections
+
+### Feeds Into
+- `bio-link-deployer` (S5) — showcase page URL for link hub
+- `email-drip-sequence` (S5) — showcase page as email destination
+- `github-pages-deployer` (S5) — HTML file to deploy
+
+### Fed By
+- `affiliate-program-search` (S1) — `recommended_program` product data
+- `grand-slam-offer` (S4) — offer framing for the showcase
+- `bonus-stack-builder` (S4) — bonuses to feature on the page
+
+### Feedback Loop
+- `conversion-tracker` (S6) measures showcase conversion rate → optimize page elements
+
+## Quality Gate
+
+Before delivering output, verify:
+
+1. Would I share this on MY personal social?
+2. Contains specific, surprising detail? (not generic)
+3. Respects reader's intelligence?
+4. Remarkable enough to share? (Purple Cow test)
+5. Irresistible offer framing? (if S4 offer skills ran)
+
+Any NO → rewrite before delivering.
+
+```yaml
+chain_metadata:
+  skill_slug: "product-showcase-page"
+  stage: "landing"
+  timestamp: string
+  suggested_next:
+    - "bio-link-deployer"
+    - "github-pages-deployer"
+    - "conversion-tracker"
+```

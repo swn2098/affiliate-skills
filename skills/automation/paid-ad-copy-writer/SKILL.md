@@ -8,6 +8,9 @@ description: >
   "scale with paid ads", "run ads for my affiliate link",
   "write Facebook ad", "Google Search ad copy".
 license: MIT
+version: "1.0.0"
+tags: ["affiliate-marketing", "automation", "scaling", "workflow", "ads", "ppc", "copywriting"]
+compatibility: "Claude Code, ChatGPT, Gemini CLI, Cursor, Windsurf, OpenClaw, any AI agent"
 metadata:
   author: affitor
   version: "1.0"
@@ -215,3 +218,41 @@ budget_suggestion:
 
 - `shared/references/ftc-compliance.md` — FTC disclosure requirements for paid advertising. Read in Step 4.
 - `shared/references/affiliate-glossary.md` — Ad terminology (ROAS, CTR, CPC). Referenced in budget guide.
+- `shared/references/flywheel-connections.md` — master flywheel connection map
+
+## Flywheel Connections
+
+### Feeds Into
+- `conversion-tracker` (S6) — ad links to track conversions
+- `ab-test-generator` (S6) — ad copy variants for testing
+
+### Fed By
+- `affiliate-program-search` (S1) — product data for ad copy
+- `grand-slam-offer` (S4) — offer framing for ad messaging
+- `landing-page-creator` (S4) — landing page URL as ad destination
+
+### Feedback Loop
+- `conversion-tracker` (S6) measures ad ROAS → optimize ad copy, targeting, and budget allocation
+
+## Quality Gate
+
+Before delivering output, verify:
+
+1. Would I share this on MY personal social?
+2. Contains specific, surprising detail? (not generic)
+3. Respects reader's intelligence?
+4. Remarkable enough to share? (Purple Cow test)
+5. Irresistible offer framing? (if S4 offer skills ran)
+
+Any NO → rewrite before delivering.
+
+```yaml
+chain_metadata:
+  skill_slug: "paid-ad-copy-writer"
+  stage: "automation"
+  timestamp: string
+  suggested_next:
+    - "conversion-tracker"
+    - "ab-test-generator"
+    - "landing-page-creator"
+```
