@@ -1,4 +1,5 @@
 # affiliate-skills
+# guild https://benpiaz.academy/blog/affiliate-skills-ai-lam-affiliate-marketing?fbclid=IwY2xjawQvabZleHRuA2FlbQIxMABicmlkETEzVjRqR2FiZTViTlRCRHVnc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHhFGq3UJ2xiOoepdnou1icGyPJlXcW_tWGn957YJ7v8apCpNBx5XarT9SXed_aem_8mDu3AKti-tgTyhAIyh1_Q
 
 **Turn any AI into your affiliate marketing team.**
 
